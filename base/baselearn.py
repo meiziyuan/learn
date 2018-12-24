@@ -49,7 +49,3 @@ b'\xe4\xb8\xad'.decode('utf-8',errors='ignore')
 #计算str包含多少个字符，即字符长度，用len()；如果换成bytes，就计算字节数
 print(len('ABC中文'))
 print(len('中文'.encode('utf-8')))
-
-lista = []
-
-tuple=(1, 2, 3)
