@@ -26,4 +26,8 @@ print(matelist)
 
 ##tuple所谓的不变，指的是tuple所有的元素，指向永远不变
 
+##使用for ... in 结果遍历列表数组
+arrlist = ['a','b','c' ]
+for ch in arrlist:
+    print(ch)
 

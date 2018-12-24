@@ -26,3 +26,14 @@ print(sys.argv)
 
 ##如何获取python命令的可执行文件路径
 print(sys.executable)
+
+##获取键盘输入input()
+#input()返回的是str,int()可以将str将纯数字的字符串转换为整数
+str = input("请输入：")
+aa = int(str)
+print(aa > 0)
+
+##range()可以生成一个整数序列，再通过list函数转换为list
+#range(5)生成的序列是从0开始小于5的整数：range(1,5)生成的序列是从1开始小于5的整数
+print(list(range(5)))   #[0,1,2,3,4]
+print(list(range(1,5)))  #[1,2,3,4]
