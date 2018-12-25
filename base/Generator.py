@@ -43,19 +43,40 @@ while True:
         print(e.value)
         break
 
-
+##杨辉三角
 def Yanghui(N):
     list1 = [1]
-    list2 = []
-    i = 2
-    j=1
-    while(i < N):
-        while(j<=i):
-            list1 = list2[:]
-            list2[0] = 1
-            list2[j] = list1[j-1]+list1[j]
-            j = j+1
-            pass
-        i = i+1
-        pass
+    list2 = [1,1]
+    i = 1
+    while(i<= N):
+        if(i == 1):
+            #print(list1)
+            yield list1
+            i = i+1
+        elif(i == 2):
+            #print(list2)
+            yield list2
+            i = i+1
+        else:
+            list1 = list2
+            list2 = []
+            list2.append(1)
+            j = 2
+            while(j < i):
+                list2.append(list1[j-1]+list1[j-2])
+                j = j+1
+            list2.append(1)
+            #print(list2)
+            yield list2
+            i = i+1
+g = Yanghui(10)
+
+while True:
+    try:
+        x = next(g)
+        print("g:",x)
+    except StopIteration as e:
+        print(e.value)
+        break
+
 
