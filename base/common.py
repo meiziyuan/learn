@@ -16,6 +16,10 @@ print(dir(str)) ##查看字符串的方法
 #当前路径用“.”表示，在用os.path.abspath()将其转换为绝对路径
 print(os.path.abspath("."))
 
+##获取当前目录下的文件及目录名
+print(os.listdir("."))
+
+
 ##如何获取当前模块的文件名，可以用过特殊变量获取__file__
 print(__file__)
 
@@ -37,3 +41,4 @@ print(aa > 0)
 #range(5)生成的序列是从0开始小于5的整数：range(1,5)生成的序列是从1开始小于5的整数
 print(list(range(5)))   #[0,1,2,3,4]
 print(list(range(1,5)))  #[1,2,3,4]
+
