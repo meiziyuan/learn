@@ -5,18 +5,21 @@
 
 class Student(object):
     mateclass = 0   #类属性
+    __slots__ = ('name','score','sex')
+    #使用__slots__要注意，__slots__定义的属性仅对当前类实例起作用，对继承的子类是不起作用的
 #特殊方法“__init__”前后分别有两个下划线！！！
-    def __init__(self,name,score,sex="女"):
+    def __init__(self,name,score,sex):  #类初始化为实例时干的事
         self.name = name
         self.score = score
-        self.__sex=sex
+ #       self.__sex=sex   ##私有属性，实际self实例化时，该属性名改为_Student__sex
         Student.mateclass = Student.mateclass+1   ##每创建一个实例，边+1
     def get_score(self):
         return self.score
-    def get_sex(self):
+'''
+  def get_sex(self):
         return self.__sex
     pass
-
+'''
 bart = Student('alice',35,"男")
 print(bart.get_sex())
 #注意到__init__方法的第一个参数永远是self，表示创建的实例本身.
@@ -52,3 +55,5 @@ s.mateclass = s.mateclass+1
 s1 = Student('aaa',23)
 print(s.mateclass)
 print(s1.mateclass)
+
+
