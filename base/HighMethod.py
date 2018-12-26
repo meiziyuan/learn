@@ -63,3 +63,10 @@ def by_name(t):
     return t[0]
 L2 = sorted(L, key=by_name) ##对L中的每一个元素使用by_name方法，然后将作用之后的元素进行排序
 print(L2)
+
+
+##匿名函数 lambda x: x*x
+#关键字lambda表示匿名函数，冒号前面的x表示函数参数。
+#匿名函数有个限制，就是只能有一个表达式，不用写return，返回值就是该表达式的结果。
+f = lambda x: x*x
+print(f(5))
